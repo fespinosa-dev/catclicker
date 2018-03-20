@@ -8,37 +8,43 @@ class CatsAreaView {
 }
 
 class CatsListView {
-
-    render() {
-
+    constructor() {
+        this.nav = document.querySelector("nav");
+        this.ul = document.createElement("ul");
+       
     }
 
-    init(){
-        let nav = document.querySelector("nav");
-        let ul = document.createElement("ul");
-        for (let index = 0; index < this.cats.length; index++) {
+    render() {
+        for (let index = 0; index < octopus.getCats().length; index++) {
             const cat = this.cats[index];
-            let li = document.createElement("li");
-            li.innerText = cat.name;
+            this.li = document.createElement("li");
+            this.li.innerText = cat.name;
 
-            li.addEventListener("click", () => {
+            this.li.addEventListener("click", () => {
                 this.displayOnCatsArea(cat);
             });
 
-            ul.appendChild(li);
-
-
+            this.ul.appendChild(li);
 
         }
-        nav.appendChild(ul);
+        this.nav.appendChild(ul);
     }
 }
 
 class Octopus {
-
-    init() {
+    constructor() {
+        this.cats = [
+            cat1 = new Cat("https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg", "Meli"),
+            cat2 = new Cat("https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg", "Quico")
+        ];
 
     }
+
+    getCats() {
+        return this.cats;
+    }
+
+    
 }
 
 class Cat {
@@ -48,7 +54,4 @@ class Cat {
     }
 }
 
-var cats = [
-    cat1 = new Cat("https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg", "Meli"),
-    cat2 = new Cat("https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg", "Quico")
-]
+var octopus = new Octopus();
