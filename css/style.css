@@ -3,3 +3,6 @@ img{
     height: 250px;
 }
 
+#admin{
+    display: none;
+}
