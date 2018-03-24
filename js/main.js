@@ -105,8 +105,9 @@ class Cat {
 
 var model = {
     currentCat: null,
-    cats : [new Cat("https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg", "Meli"),
-    new Cat("https://static.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg", "Quico")]
+    cats : [new Cat("img/cat1.jpg", "Meli"), new Cat("img/cat5.jpg", "Quico"),
+            new Cat("img/cat3.jpg", "Fernando"), new Cat("img/cat4.jpg", "Suli"), 
+            new Cat("img/cat2.jpg", "Mandrake")]
 }
 
 
